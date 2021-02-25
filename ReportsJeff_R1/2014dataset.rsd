@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>AdvWorks2014</DataSourceReference>
+      <CommandText>SELECT        DimCustomer.FirstName, DimCustomer.LastName, DimCustomer.EmailAddress, FactInternetSales.SalesAmount, FactInternetSales.TaxAmt, FactInternetSales.*, DimCustomer.*
+FROM            DimCustomer INNER JOIN
+                         FactInternetSales ON DimCustomer.CustomerKey = FactInternetSales.CustomerKey</CommandText>
+    </Query>
+  </DataSet>
+</SharedDataSet>
